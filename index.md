@@ -13,10 +13,15 @@ Currently, I hold the position of Graduate Researcher at the I3D lab within the 
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Aug. 2022]** Joined as Teaching Assistant.
+- **[Aug. 2022]** Joined as Teaching Assistant.
+- **[Aug. 2022]** Joined as Teaching Assistant.
+- **[Jun. 2022]** Completed Undergraduate thesis and secured an A+ grade.
+- **[Mar. 2022]** Secured All India Rank of 22 in National Engineering Olympiad.
+- **[Jan. 2022]** Started working on Undergraduate thesis titled- 3D Hologram with gesture control.
+- **[Dec. 2021]** Qualified round one of the National Engineering Olympiad for Undergraduates.
+- **[Jan. 2021]** Started working on FPGA implementation.
+- **[Jan. 2021]** Joined as Undergraduate research fellow at CASP lab, RIT.
 
 {% include_relative _includes/publications.md %}
 
