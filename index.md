@@ -24,5 +24,5 @@ Currently, I hold the position of Graduate Researcher at the I3D lab within the 
 - **[Jan. 2021]** Joined as Undergraduate research fellow at CASP lab, RIT.
 
 {% include_relative _includes/publications.md %}
-
-{% include_relative _includes/services.md %}
+<!-- 
+{% include_relative _includes/services.md %} -->
