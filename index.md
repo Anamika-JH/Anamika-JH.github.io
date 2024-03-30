@@ -13,10 +13,10 @@ Currently, I hold the position of Graduate Researcher at the I3D lab within the 
 
 ## News
 
-- **[Aug. 2022]** Joined as Teaching Assistant.
-- **[Aug. 2022]** Joined as Teaching Assistant.
-- **[Aug. 2022]** Joined as Teaching Assistant.
-- **[Jun. 2022]** Completed Undergraduate thesis and secured an A+ grade.
+- **[Feb. 2024]** One paper got accepted in IUI 2024.
+- **[Aug. 2023]** Joined as Graduate researcher in Prestigious Indian Institute of Science.
+- **[Aug. 2022]** Completed undergraduate studies.
+- **[Jun. 2022]** Secured an A+ grade for undergraduate thesis
 - **[Mar. 2022]** Secured All India Rank of 22 in National Engineering Olympiad.
 - **[Jan. 2022]** Started working on Undergraduate thesis titled- 3D Hologram with gesture control.
 - **[Dec. 2021]** Qualified round one of the National Engineering Olympiad for Undergraduates.
