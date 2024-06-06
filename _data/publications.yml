@@ -5,7 +5,7 @@ main:
     conference_short: ACM IUI
     conference: ACM Conference on Intelligent User Interfaces <strong>(ACM IUI)</strong>, 2024.
     pdf: https://dl.acm.org/doi/pdf/10.1145/3640544.3645236?casa_token=Syl7rcwjuvoAAAAA:7suUqMEyZcWKANcgqQKTJM7I8RfxyhFO9t3vhJjSwTGJ8tLd7kp6onJOJqLVxlOJOmewbgQlfvSRzA
-    website: https://anujithm.github.io/Eye-Gaze-Controlled-Robot.github.io/
+    code: https://anujithm.github.io/Eye-Gaze-Controlled-Robot.github.io/
     #bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/Mat.png
     #notes: Oral Presentation
