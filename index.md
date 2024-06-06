@@ -8,8 +8,7 @@ Currently, I hold the position of Graduate Researcher at the I3D lab within the 
 
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Robotics:** Motion Planning, Control, Vision
 
 ## News
 
