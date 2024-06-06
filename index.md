@@ -18,7 +18,6 @@ Currently, I hold the position of Graduate Researcher at the I3D lab within the 
 - **[Jun. 2022]** Secured an A+ grade for undergraduate thesis
 - **[Mar. 2022]** Secured All India Rank of 22 in National Engineering Olympiad.
 - **[Jan. 2022]** Started working on Undergraduate thesis titled- 3D Hologram with gesture control.
-- **[Dec. 2021]** Qualified round one of the National Engineering Olympiad for Undergraduates.
 - **[Jan. 2021]** Started working on FPGA implementation.
 - **[Jan. 2021]** Joined as Undergraduate research fellow at CASP lab, RIT.
 
