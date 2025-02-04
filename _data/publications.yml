@@ -10,10 +10,10 @@ main:
     image: ./assets/img/Mat.png
     #notes: Oral Presentation
 
-   - title: Accessibility Analysis of Educational Websites Using WCAG 2.0
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-     conference_short: CVPR
-     conference: ACM Journals Digital Government-Research and Practice <strong>(CVPR)</strong>, 2020.
+  -  title: Accessibility Analysis of Educational Websites Using WCAG 2.0
+     authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+     conference_short: ACM Journals
+     conference:  Digital Government-Research and Practice <strong>(CVPR)</strong>, 2020.
      pdf: https://dl.acm.org/doi/full/10.1145/3696318
   #   code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
   #   page: https://class-il.mpi-inf.mpg.de/mnemonics/
