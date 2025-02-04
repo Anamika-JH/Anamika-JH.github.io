@@ -14,7 +14,7 @@ main:
     authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
   #   conference_short: CVPR
      journal: ACM Journals Digital Government-Research and Practice <strong>(CVPR)</strong>, 2020.
-  #   pdf: https://arxiv.org/pdf/2002.10211.pdf
+     pdf: https://dl.acm.org/doi/full/10.1145/3696318
   #   code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
   #   page: https://class-il.mpi-inf.mpg.de/mnemonics/
   #   bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
