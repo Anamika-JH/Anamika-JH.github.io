@@ -10,8 +10,8 @@ main:
     image: ./assets/img/Mat.png
     #notes: Oral Presentation
 
-  # - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-  #   authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+   - title: Accessibility Analysis of Educational Websites Using WCAG 2.0
+    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
   #   conference_short: CVPR
   #   conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
   #   pdf: https://arxiv.org/pdf/2002.10211.pdf
