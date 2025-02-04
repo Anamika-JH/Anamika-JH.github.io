@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-Currently, I hold the position of Graduate Researcher at the I3D lab within the Department of Design and Manufacturing(DnM) of the Indian Institute of Science, Bangalore, guided by Pradipta Biswas. Prior to this role, I completed my undergraduate studies at RIT, Kottayam, specializing in Electronics and Communication Engineering. During my time at RIT, I was as an Undergraduate Researcher at the Centre for Advanced Signal Processing (CASP lab) under mentorship of Manju Manuel.
+Currently, I hold the position of Research Associate at the Indian Institute of Technology, Delhi, under the mentorship of Prof. M. Hanmandlu. Prior to this role, I was a Graduate Researcher at the I3D lab within the Department of Design and Manufacturing (DnM) of the Indian Institute of Science, Bangalore, guided by Pradipta Biswas. I completed my undergraduate studies at RIT, Kottayam, specializing in Electronics and Communication Engineering. During my time at RIT, I was an Undergraduate Researcher at the Centre for Advanced Signal Processing (CASP lab) under the mentorship of Manju Manuel.
 
 ## Research Interests
 
