@@ -24,5 +24,5 @@ Currently, I hold the position of Research Associate at the Indian Institute of 
 - **[Jan. 2021]** Joined as Undergraduate research fellow at CASP lab, RIT.
 
 {% include_relative _includes/publications.md %}
-<!-- 
-{% include_relative _includes/services.md %} -->
+
+{% include_relative _includes/services.md %}
