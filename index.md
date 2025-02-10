@@ -16,7 +16,7 @@ Currently, I hold the position of Research Associate at the Indian Institute of 
 - **[Jul. 2024]** Our paper accepted to Digital Government: Research and Practice.
 - **[Jun. 2024]** Started working as a Research Associate at IIT Delhi.
 - **[Feb. 2024]** One paper got accepted in IUI 2024.
-- **[Aug. 2023]** Joined as Graduate researcher in Prestigious Indian Institute of Science.
+- **[Aug. 2023]** Joined as Graduate researcher in Indian Institute of Science.
 - **[Aug. 2022]** Completed undergraduate studies.
 - **[Jun. 2022]** Secured an A+ grade for undergraduate thesis
 - **[Mar. 2022]** Secured All India Rank of 22 in National Engineering Olympiad.
