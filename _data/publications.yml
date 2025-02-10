@@ -11,14 +11,14 @@ main:
   -  title: Accessibility Analysis of Educational Websites Using WCAG 2.0
      authors: Utkarsha Singh, Jeevithashree Divya Venkatesh,Anujith Muraleedharan, KamalPreet Singh Saluja, <strong>Anamika J H</strong>, Pradipta Biswas
      conference_short: ACM Journals
-     conference:  Digital Government-Research and Practice, 2024.
+     conference:  Digital Government-Research and Practice, 2024
      pdf: https://dl.acm.org/doi/full/10.1145/3696318
      image: ./assets/img/wcag.png
 
   - title: Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment
     authors: Anujith Muraleedharan, <strong>Anamika J H</strong>, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas
     conference_short: ACM IUI
-    conference: ACM Conference on Intelligent User Interfaces <strong>(ACM IUI)</strong>, 2024.
+    conference: ACM Conference on Intelligent User Interfaces <strong>(ACM IUI)</strong>, 2024
     pdf: https://dl.acm.org/doi/pdf/10.1145/3640544.3645236?casa_token=Syl7rcwjuvoAAAAA:7suUqMEyZcWKANcgqQKTJM7I8RfxyhFO9t3vhJjSwTGJ8tLd7kp6onJOJqLVxlOJOmewbgQlfvSRzA
     #bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/Mat.png
