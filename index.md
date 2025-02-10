@@ -12,13 +12,13 @@ Currently, I hold the position of Research Associate at the Indian Institute of 
 
 ## News
 
+- **[Jun. 2024]** Started working as a Research Associate under the guidance of Prof. M. Hanmandlu at IIT Delhi.
 - **[Feb. 2024]** One paper got accepted in IUI 2024.
 - **[Aug. 2023]** Joined as Graduate researcher in Prestigious Indian Institute of Science.
 - **[Aug. 2022]** Completed undergraduate studies.
 - **[Jun. 2022]** Secured an A+ grade for undergraduate thesis
 - **[Mar. 2022]** Secured All India Rank of 22 in National Engineering Olympiad.
 - **[Jan. 2022]** Started working on Undergraduate thesis titled- 3D Hologram with gesture control.
-- **[Jan. 2021]** Started working on FPGA implementation.
 - **[Jan. 2021]** Joined as Undergraduate research fellow at CASP lab, RIT.
 
 {% include_relative _includes/publications.md %}
