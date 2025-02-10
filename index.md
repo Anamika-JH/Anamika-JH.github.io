@@ -12,9 +12,9 @@ Currently, I hold the position of Research Associate at the Indian Institute of 
 
 ## News
 
-- **[Jan. 2025]** Paper on HRI submitted to International Journal of Intelligent Robotics and Applications.
+- **[Jan. 2025]** Paper on HRI submitted to IJIRA.
 - **[Jul. 2024]** Our paper accepted to Digital Government: Research and Practice.
-- **[Jun. 2024]** Started working as a Research Associate under the guidance of Prof. M. Hanmandlu at IIT Delhi.
+- **[Jun. 2024]** Started working as a Research Associate at IIT Delhi.
 - **[Feb. 2024]** One paper got accepted in IUI 2024.
 - **[Aug. 2023]** Joined as Graduate researcher in Prestigious Indian Institute of Science.
 - **[Aug. 2022]** Completed undergraduate studies.
