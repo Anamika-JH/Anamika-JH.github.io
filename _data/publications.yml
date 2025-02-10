@@ -1,5 +1,12 @@
 main:
 
+  -  title: Accessibility Analysis of Educational Websites Using WCAG 2.0
+     authors: Utkarsha Singh, Jeevithashree Divya Venkatesh,Anujith Muraleedharan, KamalPreet Singh Saluja, <strong>Anamika J H</strong>, Pradipta Biswas
+     conference_short: ACM Journals
+     conference:  Digital Government-Research and Practice, 2024.
+     pdf: https://dl.acm.org/doi/full/10.1145/3696318
+     image: ./assets/img/wcag.png
+
   - title: Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment
     authors: Anujith Muraleedharan, <strong>Anamika J H</strong>, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas
     conference_short: ACM IUI
@@ -10,12 +17,7 @@ main:
     image: ./assets/img/Mat.png
     #notes: Oral Presentation
 
-  -  title: Accessibility Analysis of Educational Websites Using WCAG 2.0
-     authors: Utkarsha Singh, Jeevithashree Divya Venkatesh,Anujith Muraleedharan, KamalPreet Singh Saluja, <strong>Anamika J H</strong>, Pradipta Biswas
-     conference_short: ACM Journals
-     conference:  Digital Government-Research and Practice, 2024.
-     pdf: https://dl.acm.org/doi/full/10.1145/3696318
-     image: ./assets/img/wcag.png
+
   #   code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
   #   page: https://class-il.mpi-inf.mpg.de/mnemonics/
   #   bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
