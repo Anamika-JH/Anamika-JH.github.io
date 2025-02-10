@@ -1,6 +1,6 @@
 main:
   - title: "Advancing Rehabilitation: Adaptive Robotic Arm for Safe Block Printing with Gaze Control"
-    authors: "Anujith Muraleedharan, <strong>Anamika J H</strong>, Madasu Hanmandlu"
+    authors: "Anujith Muraleedharan*, <strong>Anamika J H*</strong>, Madasu Hanmandlu"
     conference_short: "IJIRA"
     conference: "International Journal of Intelligent Robotics and Applications"
     code: "https://anujithm.github.io/Eye-Gaze-Controlled-Robot.github.io/"
