@@ -9,6 +9,7 @@ Currently, I hold the position of Research Associate at the Indian Institute of 
 ## Research Interests
 
 - The goal of my research is to develop general purpose robots.
+
 ## News
 
 - **[Jan. 2025]** Paper on HRI submitted to IJIRA.
