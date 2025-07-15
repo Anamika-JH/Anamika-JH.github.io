@@ -8,8 +8,7 @@ Currently, I hold the position of Research Associate at the Indian Institute of 
 
 ## Research Interests
 
-- **Robotics:** Motion Planning, Control, Vision
-
+- The goal of my research is to develop general purpose robots.
 ## News
 
 - **[Jan. 2025]** Paper on HRI submitted to IJIRA.
