@@ -241,7 +241,10 @@ a:hover {
   margin-left: -3px;
   margin-right: -3px;
 }
-
+.hi-name {
+  font-family: "Noto Sans Devanagari", "Mangal", sans-serif;
+  font-weight: 600;
+}
 /*------------------
  * Name
  *------------------*/
