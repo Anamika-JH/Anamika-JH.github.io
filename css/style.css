@@ -320,7 +320,9 @@ a:hover {
   max-width: 240px;
   width: 100%;
 }
-
+.pub-wrapper .authors .nolink {
+  color: var(--dark-gray);         
+}
 @media (max-width: 767.98px) {
   .pub-wrapper .figure {
     margin-bottom: 10px;
