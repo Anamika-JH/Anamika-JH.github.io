@@ -235,7 +235,7 @@
   // Initialize everything when DOM is ready
   const initializeApp = () => {
     ThemeManager.init();
-    ProfileManager.init();
+    //ProfileManager.init();
     ClipboardManager.init();
     Utils.setFooterYear();
     Utils.setupMoreContentScroll();
