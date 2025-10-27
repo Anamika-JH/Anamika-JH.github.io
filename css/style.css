@@ -458,3 +458,49 @@ a:hover {
 .citation p {
   margin-bottom: 0;
 }
+
+/* --- Social icons: bigger size, no underline, pop on hover --- */
+.social.icons a {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 12px;
+  color: inherit;
+  text-decoration: none !important;  /* override global a:hover underline */
+  transition: transform 140ms ease, opacity 140ms ease;
+  transform-origin: center bottom;
+}
+
+/* Increase size of all icons */
+.social.icons i {
+  font-size: 1.15rem;  /* adjust to taste: 1.12–1.2rem */
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* Style the CV text like an icon (bold + same size) */
+.social.icons a[aria-label="CV"] {
+  font-weight: 800;
+  font-size: 1.15rem;  /* matches icon size */
+  line-height: 1;
+}
+
+/* Hover effect: no underline, just a clean scale pop */
+.social.icons a:hover {
+  text-decoration: none !important;
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* Keyboard focus still visible (accessibility) */
+.social.icons a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .social.icons a {
+    transition: none;
+    transform: none;
+  }
+}
