@@ -459,48 +459,41 @@ a:hover {
   margin-bottom: 0;
 }
 
-/* --- Social icons: bigger size, no underline, pop on hover --- */
+/* ===== Social icon sizing (bigger) ===== */
+:root {
+  --social-icon-size: 1.35rem;     /* tweak this to your taste */
+  --social-icon-hover-scale: 1.18; /* popup strength on hover */
+}
+
 .social.icons a {
+  text-decoration: none !important;   /* kill underline */
   display: inline-flex;
   align-items: center;
   margin-right: 12px;
   color: inherit;
-  text-decoration: none !important;  /* override global a:hover underline */
   transition: transform 140ms ease, opacity 140ms ease;
   transform-origin: center bottom;
 }
 
-/* Increase size of all icons */
-.social.icons i {
-  font-size: 1.15rem;  /* adjust to taste: 1.12–1.2rem */
+/* Increase size of all icons + CV */
+.social.icons i,
+.social.icons .cv-text {
+  font-size: var(--social-icon-size);
   line-height: 1;
   vertical-align: middle;
 }
 
-/* Style the CV text like an icon (bold + same size) */
-.social.icons a[aria-label="CV"] {
-  font-weight: 800;
-  font-size: 1.15rem;  /* matches icon size */
-  line-height: 1;
-}
+/* Keep CV bold to read like an icon */
+.social.icons .cv-text { font-weight: 800; }
 
-/* Hover effect: no underline, just a clean scale pop */
+/* Hover popup (no underline) */
 .social.icons a:hover {
-  text-decoration: none !important;
-  transform: scale(1.15);
+  transform: scale(var(--social-icon-hover-scale));
   opacity: 1;
 }
 
-/* Keyboard focus still visible (accessibility) */
-.social.icons a:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+/* Optional: slightly smaller on very small screens */
+@media (max-width: 420px) {
+  :root { --social-icon-size: 1.20rem; }
 }
 
-/* Respect reduced-motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .social.icons a {
-    transition: none;
-    transform: none;
-  }
-}
