@@ -568,33 +568,3 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   .rs-fab { transition: none; }
 }
-/* Footer layout: text + tiny globe to the right */
-footer.citation {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-footer.citation p { margin: 0; }
-footer.citation .visitor-badge { margin-left: auto; }
-
-/* Tiny globe container */
-.visitor-badge{
-  width: 64px;         /* final visible size */
-  height: 64px;
-  overflow: hidden;    /* hide overflow after scaling */
-  position: relative;
-}
-
-/* Scale down whatever the script injects (canvas/iframe/div) */
-.visitor-badge > *{
-  transform: scale(0.28);         /* tweak 0.22–0.35 for smaller/larger */
-  transform-origin: right bottom; /* keep it anchored nicely */
-  display: block;
-}
-
-/* Mobile: make it a touch smaller */
-@media (max-width: 576px){
-  .visitor-badge{ width: 56px; height: 56px; }
-  .visitor-badge > *{ transform: scale(0.24); }
-}
