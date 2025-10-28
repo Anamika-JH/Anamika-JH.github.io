@@ -568,3 +568,19 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   .rs-fab { transition: none; }
 }
+/* ClustrMaps in footer: small and centered */
+.clustrmaps-footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Globe sizing — adjust once and done */
+.clustrmaps-footer canvas,
+.clustrmaps-footer iframe,
+.clustrmaps-footer #clustrmaps-widget {
+  width: 64px !important;     /* try 56–80px if you want */
+  height: 64px !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+}
