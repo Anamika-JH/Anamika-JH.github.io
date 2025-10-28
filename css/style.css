@@ -568,3 +568,25 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   .rs-fab { transition: none; }
 }
+/* Small, neat globe in footer */
+.globe-wrap {
+  width: 72px;      /* change to 64/80/96 as you like */
+  height: 72px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden; /* hide any overflow from provider styles */
+}
+
+/* ClustrMaps injects a canvas or iframe; force it to our box */
+.globe-wrap canvas,
+.globe-wrap iframe,
+.globe-wrap > * {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  display: block !important;
+}
+
+/* Optional: if your theme’s line-height nudges it down */
+footer .globe-wrap { vertical-align: middle; }
