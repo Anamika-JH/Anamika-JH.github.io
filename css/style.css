@@ -561,8 +561,8 @@ a:hover {
 
 /* Target the wrapper (right side in footer) */
 .globe-wrap{
-  width: 24px;          /* change to 36/32 if you want even smaller */
-  height: 24px;
+  width: 10px;          /* change to 36/32 if you want even smaller */
+  height: 10px;
   display: inline-block;
   position: relative;
   overflow: hidden;     /* hide any spillover */
