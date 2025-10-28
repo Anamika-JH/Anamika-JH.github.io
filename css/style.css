@@ -559,34 +559,42 @@ a:hover {
   box-shadow: none;
 }
 
-/* Narrow screens: make iframe a bit shorter */
-@media (max-width: 576px) {
-  .rs-modal .modal-body iframe { height: 70vh; }
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .rs-fab { transition: none; }
-}
-/* Small, neat globe in footer */
-.globe-wrap {
-  width: 40px;      /* change to 64/80/96 as you like */
-  height: 40px;
+/* Target the wrapper (right side in footer) */
+.globe-wrap{
+  width: 24px;          /* change to 36/32 if you want even smaller */
+  height: 24px;
   display: inline-block;
   position: relative;
-  overflow: hidden; /* hide any overflow from provider styles */
+  overflow: hidden;     /* hide any spillover */
 }
 
-/* ClustrMaps injects a canvas or iframe; force it to our box */
-.globe-wrap canvas,
-.globe-wrap iframe,
-.globe-wrap > * {
+/* ClustrMaps injects a div with an auto id like clustrmaps-widget-XXXX */
+.globe-wrap [id^="clustrmaps-widget"]{
+  position: absolute;
+  inset: 0;
   width: 100% !important;
   height: 100% !important;
   max-width: 100% !important;
   max-height: 100% !important;
+}
+
+/* Force the internal canvas/iframe to our box */
+.globe-wrap [id^="clustrmaps-widget"] canvas,
+.globe-wrap [id^="clustrmaps-widget"] iframe,
+.globe-wrap [id^="clustrmaps-widget"] > *{
+  width: 100% !important;
+  height: 100% !important;
   display: block !important;
 }
 
-/* Optional: if your theme’s line-height nudges it down */
-footer .globe-wrap { vertical-align: middle; }
+/* --- If it's STILL big (provider inline sizing), uncomment the "nuclear option" below ---
+.globe-wrap{
+  width: 36px;
+  height: 36px;
+}
+.globe-wrap [id^="clustrmaps-widget"]{
+  width: 300px !important;    /* their default size */
+  height: 300px !important;
+  transform: scale(0.12);     /* 0.12 * 300px ≈ 36px */
+  transform-origin: right center;  /* keeps it aligned right */
+
