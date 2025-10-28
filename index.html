@@ -687,13 +687,30 @@ series = {IUI '24 Companion}
       <p>Feel free to build your homepage upon my <a class="template"
           href="https://github.com/PingchuanMa/PingchuanMa.github.io">template</a> ;)</p>
       <p>Copyright &copy; <span id="year"></span> Anamika J H</p>
-<!-- ClustrMaps globe (small) -->
-    <div class="visitor-badge" aria-label="Visitors" title="Visitors">
-      <script
-        id="clstr_globe"
-        src="https://clustrmaps.com/globe.js?d=PE-3KkUMqDXSPBzI2ZT8r_VelXRJiT8qCMyznLSSbYI"
-        defer></script>
-    </div>
+<!-- Small ClustrMaps globe, pinned right -->
+<div class="globe-holder" 
+     style="position:relative;width:36px;height:36px;overflow:hidden;margin-left:auto;"
+     aria-label="Visitors" title="Visitors">
+
+  <!-- inline rules to shrink provider's injected widget -->
+  <style>
+    .globe-holder [id^="clustrmaps-widget"]{
+      position:absolute; inset:0;
+      width:300px !important; height:300px !important;  /* their default */
+      transform:scale(0.12);                            /* 300 * 0.12 ≈ 36px */
+      transform-origin:right center;
+    }
+    .globe-holder [id^="clustrmaps-widget"] canvas,
+    .globe-holder [id^="clustrmaps-widget"] iframe{
+      width:100% !important; height:100% !important; display:block !important;
+    }
+  </style>
+
+  <script id="clstr_globe"
+          src="https://clustrmaps.com/globe.js?d=PE-3KkUMqDXSPBzI2ZT8r_VelXRJiT8qCMyznLSSbYI"
+          defer></script>
+</div>
+
   
 </div>
     </footer>
