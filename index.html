@@ -688,14 +688,28 @@ series = {IUI '24 Companion}
           href="https://github.com/PingchuanMa/PingchuanMa.github.io">template</a> ;)</p>
       <p>Copyright &copy; <span id="year"></span> Anamika J H</p>
       <div class="visitor-badge" aria-label="Visitors" title="Visitors">
-        <div class="clustrmaps-footer">
-  <script
-    type="text/javascript"
-    id="mmvst_globe"
-    src="https://mapmyvisitors.com/globe.js?d=u6k1-MBNnc1Tvfw_JCfEHrzIlAM3mG80i8O-W_4qq8U">
-  </script>
-</div>
+  <!-- Visitor globe (MapMyVisitors) -->
+<div id="visitor-globe" class="visitor-badge" aria-label="Visitors" title="Visitors"></div>
+<script>
+(function () {
+  // Dynamically inject (avoids some blocker rules that match specific IDs)
+  var s = document.createElement('script');
+  s.src = 'https://mapmyvisitors.com/globe.js?d=u6k1-MBNnc1Tvfw_JCfEHrzIlAM3mG80i8O-W_4qq8U';
+  s.async = true;
+  document.getElementById('visitor-globe').appendChild(s);
 
+  // Fallback if the widget is blocked or domain not authorized
+  setTimeout(function () {
+    var c = document.querySelector('#visitor-globe canvas, #visitor-globe iframe');
+    if (!c) {
+      document.getElementById('visitor-globe').innerHTML =
+        '<a href="https://mapmyvisitors.com" rel="nofollow noopener" style="font-size:12px;opacity:.75;">Visitors</a>';
+    }
+  }, 3000);
+})();
+</script>
+
+</div>
     </footer>
 
   </div>
