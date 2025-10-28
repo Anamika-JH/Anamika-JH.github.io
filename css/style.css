@@ -570,8 +570,8 @@ a:hover {
 }
 /* Small, neat globe in footer */
 .globe-wrap {
-  width: 72px;      /* change to 64/80/96 as you like */
-  height: 72px;
+  width: 40px;      /* change to 64/80/96 as you like */
+  height: 40px;
   display: inline-block;
   position: relative;
   overflow: hidden; /* hide any overflow from provider styles */
