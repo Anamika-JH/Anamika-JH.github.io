@@ -568,30 +568,33 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   .rs-fab { transition: none; }
 }
-/* Small, centered MapMyVisitors globe */
-.mv-globe-small {
+/* Footer layout: text + tiny globe to the right */
+footer.citation {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 8px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+footer.citation p { margin: 0; }
+footer.citation .visitor-badge { margin-left: auto; }
+
+/* Tiny globe container */
+.visitor-badge{
+  width: 64px;         /* final visible size */
+  height: 64px;
+  overflow: hidden;    /* hide overflow after scaling */
+  position: relative;
 }
 
-/* Force the injected globe to a small size */
-.mv-globe-small iframe,
-.mv-globe-small canvas,
-.mv-globe-small #mapmyvisitors-widget,
-.mv-globe-small .mapmyvisitors-widget {
-  width: 64px !important;     /* adjust: 56–80px to taste */
-  height: 64px !important;
-  max-width: 64px !important;
-  max-height: 64px !important;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+/* Scale down whatever the script injects (canvas/iframe/div) */
+.visitor-badge > *{
+  transform: scale(0.28);         /* tweak 0.22–0.35 for smaller/larger */
+  transform-origin: right bottom; /* keep it anchored nicely */
+  display: block;
 }
 
-/* If their widget ignores width/height, fallback to a scale */
-.mv-globe-small {
-  /* comment this out if native sizing works */
-  transform: scale(0.85);      /* 0.7–0.9 = smaller */
-  transform-origin: center;
+/* Mobile: make it a touch smaller */
+@media (max-width: 576px){
+  .visitor-badge{ width: 56px; height: 56px; }
+  .visitor-badge > *{ transform: scale(0.24); }
 }
