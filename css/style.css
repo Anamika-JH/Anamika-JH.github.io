@@ -47,21 +47,63 @@
   text-rendering: optimizeLegibility;
 }
 /* -- */
+/* ---------- Razer-minimal diagonal sweep (theme-adaptive) ---------- */
+:root{
+  /* defaults if no theme attribute present */
+  --sweep-accent: rgba(68,214,44,0.06); /* neon green whisper */
+  --sweep-bg: #000000;                  /* dark default */
+  --sweep-size: 160% 160%;
+  --sweep-duration: 20s;
+}
+
+:root[data-bs-theme="light"]{
+  /* lighter base + softer accent so content stays readable */
+  --sweep-bg: #ffffff;
+  --sweep-accent: rgba(68,214,44,0.04);
+}
+
+:root[data-bs-theme="dark"]{
+  --sweep-bg: #000000;
+  --sweep-accent: rgba(68,214,44,0.06);
+}
+
+/* OS-level fallback if you don't set data-bs-theme */
+@media (prefers-color-scheme: light){
+  :root:not([data-bs-theme]){
+    --sweep-bg: #ffffff;
+    --sweep-accent: rgba(68,214,44,0.04);
+  }
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-bs-theme]){
+    --sweep-bg: #000000;
+    --sweep-accent: rgba(68,214,44,0.06);
+  }
+}
+
+/* The background */
 .bg-sweep{
   position: fixed; inset: 0; z-index:-1; pointer-events:none;
   background:
-    linear-gradient(135deg, rgba(68,214,44,0.06) 0%, rgba(68,214,44,0.0) 40%, rgba(68,214,44,0.06) 60%, rgba(68,214,44,0.0) 100%),
-    #000;
-  background-size: 160% 160%;
-  animation: sweepMove 20s ease-in-out infinite;
+    linear-gradient(135deg,
+      var(--sweep-accent) 0%,
+      rgba(0,0,0,0) 40%,
+      var(--sweep-accent) 60%,
+      rgba(0,0,0,0) 100%
+    ),
+    var(--sweep-bg);
+  background-size: var(--sweep-size);
+  animation: sweepMove var(--sweep-duration) ease-in-out infinite;
 }
+
+/* Motion accessibility */
+@media (prefers-reduced-motion: reduce){ .bg-sweep{ animation:none; } }
+
 @keyframes sweepMove{
   0%{ background-position: 0% 0%; }
   50%{ background-position: 100% 100%; }
   100%{ background-position: 0% 0%; }
 }
-@media (prefers-reduced-motion: reduce){ .bg-sweep{ animation:none; } }
-
 
 body {
   font-family: "Lato", "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
