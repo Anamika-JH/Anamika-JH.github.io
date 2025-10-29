@@ -41,35 +41,7 @@
 </head>
 
 <body>
-  <!-- Blue laser-cross background -->
-  <div class="bg-lasers" aria-hidden="true">
-    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <filter id="laser-glow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="2" result="b1"/>
-          <feGaussianBlur stdDeviation="6" result="b2"/>
-          <feMerge>
-            <feMergeNode in="b2"/>
-            <feMergeNode in="b1"/>
-            <feMergeNode in="SourceGraphic"/>
-          </feMerge>
-        </filter>
-        <linearGradient id="laser-blue" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%"  stop-color="#bfe8ff"/>
-          <stop offset="45%" stop-color="#74c2ff"/>
-          <stop offset="55%" stop-color="#74c2ff"/>
-          <stop offset="100%" stop-color="#bfe8ff"/>
-        </linearGradient>
-      </defs>
-
-      <g class="beam-group">
-        <line class="beam b1" x1="-200" y1="180"  x2="1400" y2="-120"/>
-        <line class="beam b2" x1="-200" y1="620"  x2="1400" y2="920"/>
-        <line class="beam b3" x1="-200" y1="120"  x2="1400" y2="420"/>
-        <line class="beam b4" x1="-200" y1="680"  x2="1400" y2="380"/>
-      </g>
-    </svg>
-  </div>
+  
   <div class="container-fluid">
     <!-- Floating Research Statement button (top-right) -->
 <button
