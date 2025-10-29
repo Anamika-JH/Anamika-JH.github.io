@@ -47,62 +47,47 @@
   text-rendering: optimizeLegibility;
 }
 
-/* ===== Razer Green Lasers (opacity pulse) ===== */
-:root{
-  --razer-green: #44d62c; /* Razer green */
+/* Minimal diagonal lines that drift slowly */
+.bg-lines{
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  --bg: #000;              /* dark base */
+  --line: #1adb57;         /* Razer green */
+  --alpha: 0.22;           /* line opacity */
+  background:
+    /* two parallax layers for depth */
+    repeating-linear-gradient(135deg, rgba(26,219,87,var(--alpha)) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(135deg, rgba(26,219,87,calc(var(--alpha)*0.6)) 0 1px, transparent 1px 14px),
+    var(--bg);
+  animation: lines-slide-1 26s linear infinite, lines-slide-2 38s linear infinite;
 }
 
-.bg-lasers{
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
+/* Light/Dark adaptation (Bootstrap) */
+:root[data-bs-theme="light"] .bg-lines{
+  --bg: #ffffff;
+  --line: #2fbf4b;         /* slightly softer green on light */
+  --alpha: 0.14;
+}
+:root[data-bs-theme="dark"] .bg-lines{
+  --bg: #000000;
+  --line: #1adb57;
+  --alpha: 0.22;
 }
 
-/* Laser 1 */
-.bg-lasers::before,
-.bg-lasers::after{
-  content:"";
-  position:absolute;
-  left:-20%;              /* extend beyond edges so it fully spans */
-  width:140%;
-  height:2px;             /* thin laser */
-  background: linear-gradient(90deg,
-    rgba(68,214,44,0) 0%,
-    rgba(68,214,44,0.0) 8%,
-    var(--razer-green) 50%,
-    rgba(68,214,44,0.0) 92%,
-    rgba(68,214,44,0) 100%
-  );
-  box-shadow: 0 0 8px rgba(68,214,44,0.45);   /* subtle glow line */
-  opacity: 0.25;
-  animation: laserPulse 2.8s infinite ease-in-out;
+/* OS fallback if you don't set data-bs-theme */
+@media (prefers-color-scheme: light){
+  :root:not([data-bs-theme]) .bg-lines{ --bg:#fff; --line:#2fbf4b; --alpha:0.14; }
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-bs-theme]) .bg-lines{ --bg:#000; --line:#1adb57; --alpha:0.22; }
 }
 
-/* Diagonal placements */
-.bg-lasers::before{
-  top: 30%;
-  transform: rotate(18deg) translateZ(0);
-  animation-delay: .2s;
-}
-.bg-lasers::after{
-  top: 68%;
-  transform: rotate(-22deg) translateZ(0);
-  animation-delay: 1.1s;
-}
+/* Animations (different speeds for parallax feel) */
+@keyframes lines-slide-1{ to { background-position: 1600px 0, 0 0, 0 0; } }
+@keyframes lines-slide-2{ to { background-position: 0 0, -1200px 0, 0 0; } }
 
-/* Opacity-only animation (no motion) */
-@keyframes laserPulse{
-  0%   { opacity: 0.10; }
-  25%  { opacity: 0.35; }
-  55%  { opacity: 0.18; }
-  75%  { opacity: 0.42; }
-  100% { opacity: 0.12; }
-}
-
-/* Motion-safety */
+/* Motion accessibility */
 @media (prefers-reduced-motion: reduce){
-  .bg-lasers::before, .bg-lasers::after{ animation: none; opacity: 0.18; }
+  .bg-lines{ animation: none; }
 }
 
 body {
