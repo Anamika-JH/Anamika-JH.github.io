@@ -46,6 +46,35 @@
   font-weight: bold;
   text-rendering: optimizeLegibility;
 }
+/* Soft animated blobs behind the page */
+.bg-anim{
+  position: fixed;
+  inset: 0;
+  z-index: -1;                 /* stays behind all content */
+  pointer-events: none;        /* never block clicks */
+  background:
+    radial-gradient(60vmax 60vmax at 10% 20%, #845ef7 0%, transparent 60%),
+    radial-gradient(50vmax 50vmax at 80% 0%,  #22b8cf 0%, transparent 60%),
+    radial-gradient(55vmax 55vmax at 40% 90%, #ffd43b 0%, transparent 60%),
+    var(--page-bg, #0b0f19);   /* fallback base */
+  filter: blur(20px) saturate(120%);
+  animation: bg-drift 16s ease-in-out infinite alternate;
+  will-change: background-position, filter;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .bg-anim{ animation: none; }
+}
+
+@keyframes bg-drift{
+  0%   { background-position: 10% 20%, 80% 0%, 40% 90%; }
+  100% { background-position: 20% 30%, 70% 10%, 45% 80%; }
+}
+
+/* Optional: adapt base color for your light/dark theme (Bootstrap 5 data-bs-theme) */
+:root[data-bs-theme="light"] { --page-bg: #ffffff; }
+:root[data-bs-theme="dark"]  { --page-bg: #0b0f19; }
 
 body {
   font-family: "Lato", "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
