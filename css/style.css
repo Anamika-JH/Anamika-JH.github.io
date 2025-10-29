@@ -644,3 +644,37 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   .rs-fab { transition: none; }
 }
+/* --- Make sweep visible and theme-colored --- */
+/* --- Make sweep visible and theme-colored --- */
+.bg-sweep{ z-index:0; }                 /* bring above the body paint */
+.container-fluid{ position:relative; z-index:1; }  /* keep content above sweep */
+
+/* LIGHT THEME = soft pink sweep */
+:root[data-bs-theme="light"]{
+  --sweep-bg: #ffffff;
+  --sweep-accent: rgba(255,105,180,0.18);   /* pink (hotpink) — tweak 0.14–0.22 */
+  --sweep-size: 180% 180%;
+}
+:root[data-bs-theme="light"] .bg-sweep{
+  /* wider bands + no gray cast */
+  background:
+    linear-gradient(135deg,
+      var(--sweep-accent) 0%,
+      transparent 35%,
+      var(--sweep-accent) 65%,
+      transparent 100%
+    ),
+    var(--sweep-bg);
+  mix-blend-mode: multiply;  /* optional: helps the pink read on white */
+}
+
+/* DARK THEME = neon green sweep (keep yours) */
+:root[data-bs-theme="dark"]{
+  --sweep-bg: #000000;
+  --sweep-accent: rgba(68,214,44,0.10);  /* slightly stronger for clarity */
+}
+
+/* Respect reduced-motion users (you already have this) */
+@media (prefers-reduced-motion: reduce){
+  .bg-sweep{ animation: none; }
+}
