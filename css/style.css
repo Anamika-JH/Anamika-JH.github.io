@@ -103,6 +103,24 @@
   50%{ background-position: 100% 100%; }
   100%{ background-position: 0% 0%; }
 }
+/* Make the sweep visible on white (light mode) */
+:root[data-bs-theme="light"]{
+  --sweep-bg: #ffffff;                 /* keep white */
+  --sweep-accent: rgba(68,214,44,0.12);/* was 0.04 -> 0.12 */
+  --sweep-size: 180% 180%;             /* slightly larger pattern */
+}
+
+/* Slightly wider green bands */
+.bg-sweep{
+  background:
+    linear-gradient(135deg,
+      var(--sweep-accent) 0%,
+      rgba(0,0,0,0) 35%,               /* was 40% */
+      var(--sweep-accent) 65%,         /* was 60% */
+      rgba(0,0,0,0) 100%
+    ),
+    var(--sweep-bg);
+}
 /* ---------- Minimal diagonal sweep (uses your theme vars) ---------- */
 body {
   font-family: "Lato", "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
