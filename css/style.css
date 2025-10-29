@@ -656,6 +656,11 @@ a:hover {
 
 /* Use transparent stops (no gray cast on white) */
 .bg-sweep{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
   background:
     linear-gradient(
       135deg,
@@ -665,6 +670,17 @@ a:hover {
       transparent 100%
     ),
     var(--sweep-bg);
+  background-size: var(--sweep-size);
+
+  /* restore the motion */
+  animation: sweepMove var(--sweep-duration) ease-in-out infinite;
+}
+
+/* Keep your existing keyframes somewhere above or repeat them here */
+@keyframes sweepMove {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
 
 /* Optional: a touch more contrast only in light mode */
