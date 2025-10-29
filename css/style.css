@@ -46,65 +46,55 @@
   font-weight: bold;
   text-rendering: optimizeLegibility;
 }
-/* -- */
-/* ---------- Razer-minimal diagonal sweep (theme-adaptive) ---------- */
+/* ---------- Minimal diagonal sweep (uses your theme vars) ---------- */
 :root{
-  /* defaults if no theme attribute present */
-  --sweep-accent: rgba(68,214,44,0.06); /* neon green whisper */
-  --sweep-bg: #000000;                  /* dark default */
   --sweep-size: 160% 160%;
   --sweep-duration: 20s;
+
+  /* Light (default) pulls from your existing variables */
+  --sweep-bg: var(--background);                 /* <- white */
+  --sweep-accent: rgba(68,214,44,0.03);          /* extra subtle on light */
 }
 
-:root[data-bs-theme="light"]{
-  /* lighter base + softer accent so content stays readable */
-  --sweep-bg: #ffffff;
-  --sweep-accent: rgba(68,214,44,0.04);
-}
-
+/* When Bootstrap sets dark mode */
 :root[data-bs-theme="dark"]{
-  --sweep-bg: #000000;
+  --sweep-bg: var(--night-background);           /* <- #121414 in your CSS */
   --sweep-accent: rgba(68,214,44,0.06);
 }
 
-/* OS-level fallback if you don't set data-bs-theme */
-@media (prefers-color-scheme: light){
-  :root:not([data-bs-theme]){
-    --sweep-bg: #ffffff;
-    --sweep-accent: rgba(68,214,44,0.04);
-  }
-}
+/* OS fallback if you don't set data-bs-theme */
 @media (prefers-color-scheme: dark){
   :root:not([data-bs-theme]){
-    --sweep-bg: #000000;
+    --sweep-bg: var(--night-background);
     --sweep-accent: rgba(68,214,44,0.06);
   }
 }
 
-/* The background */
 .bg-sweep{
-  position: fixed; inset: 0; z-index:-1; pointer-events:none;
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background:
     linear-gradient(135deg,
       var(--sweep-accent) 0%,
-      rgba(0,0,0,0) 40%,
+      transparent 40%,
       var(--sweep-accent) 60%,
-      rgba(0,0,0,0) 100%
+      transparent 100%
     ),
-    var(--sweep-bg);
+    var(--sweep-bg);   /* <- now matches your theme */
   background-size: var(--sweep-size);
   animation: sweepMove var(--sweep-duration) ease-in-out infinite;
 }
 
-/* Motion accessibility */
-@media (prefers-reduced-motion: reduce){ .bg-sweep{ animation:none; } }
-
 @keyframes sweepMove{
-  0%{ background-position: 0% 0%; }
-  50%{ background-position: 100% 100%; }
-  100%{ background-position: 0% 0%; }
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
 
+@media (prefers-reduced-motion: reduce){
+  .bg-sweep{ animation: none; }
+}
+
+/* ---------- Minimal diagonal sweep (uses your theme vars) ---------- */
 body {
   font-family: "Lato", "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
   font-size: var(--font-size);
