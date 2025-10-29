@@ -103,26 +103,8 @@
   50%{ background-position: 100% 100%; }
   100%{ background-position: 0% 0%; }
 }
-/* Make the sweep visible on white (light mode) */
-:root[data-bs-theme="light"]{
-  --sweep-bg: #ffffff;                 /* keep white */
-  --sweep-accent: rgba(68,214,44,0.12);/* was 0.04 -> 0.12 */
-  --sweep-size: 180% 180%;             /* slightly larger pattern */
-}
 
-/* Slightly wider green bands */
-.bg-sweep{
-  background:
-    linear-gradient(135deg,
-      var(--sweep-accent) 0%,
-      rgba(0,0,0,0) 35%,               /* was 40% */
-      var(--sweep-accent) 65%,         /* was 60% */
-      rgba(0,0,0,0) 100%
-    ),
-    var(--sweep-bg);
-}
-
-/* ---------- Minimal diagonal sweep (uses your theme vars) ---------- */
+/*  */
 body {
   font-family: "Lato", "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
   font-size: var(--font-size);
@@ -643,38 +625,4 @@ a:hover {
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .rs-fab { transition: none; }
-}
-/* --- Make sweep visible and theme-colored --- */
-/* --- Make sweep visible and theme-colored --- */
-.bg-sweep{ z-index:0; }                 /* bring above the body paint */
-.container-fluid{ position:relative; z-index:1; }  /* keep content above sweep */
-
-/* LIGHT THEME = soft pink sweep */
-:root[data-bs-theme="light"]{
-  --sweep-bg: #ffffff;
-  --sweep-accent: rgba(255,105,180,0.18);   /* pink (hotpink) — tweak 0.14–0.22 */
-  --sweep-size: 180% 180%;
-}
-:root[data-bs-theme="light"] .bg-sweep{
-  /* wider bands + no gray cast */
-  background:
-    linear-gradient(135deg,
-      var(--sweep-accent) 0%,
-      transparent 35%,
-      var(--sweep-accent) 65%,
-      transparent 100%
-    ),
-    var(--sweep-bg);
-  mix-blend-mode: multiply;  /* optional: helps the pink read on white */
-}
-
-/* DARK THEME = neon green sweep (keep yours) */
-:root[data-bs-theme="dark"]{
-  --sweep-bg: #000000;
-  --sweep-accent: rgba(68,214,44,0.10);  /* slightly stronger for clarity */
-}
-
-/* Respect reduced-motion users (you already have this) */
-@media (prefers-reduced-motion: reduce){
-  .bg-sweep{ animation: none; }
 }
