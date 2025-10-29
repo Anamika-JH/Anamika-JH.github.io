@@ -46,35 +46,61 @@
   font-weight: bold;
   text-rendering: optimizeLegibility;
 }
-/* Soft animated blobs behind the page */
-.bg-anim{
+
+/* RAZER — classic black + neon green only */
+:root{
+  --razer-green:  #44d62c;   /* Razer Green */
+  --razer-bg:     #000000;   /* deep black */
+  --razer-blur:   22px;
+  --razer-sat:    140%;
+  --razer-bright: 110%;
+}
+
+/* If you use Bootstrap's data-bs-theme, keep both themes identical here */
+:root[data-bs-theme="light"]{
+  --razer-green:  #44d62c;
+  --razer-bg:     #000000;
+}
+:root[data-bs-theme="dark"]{
+  --razer-green:  #44d62c;
+  --razer-bg:     #000000;
+}
+
+/* Optional OS fallback if you don't set data-bs-theme */
+@media (prefers-color-scheme: light){
+  :root:not([data-bs-theme]){ --razer-green:#44d62c; --razer-bg:#000000; }
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-bs-theme]){ --razer-green:#44d62c; --razer-bg:#000000; }
+}
+
+/* Animated background: multiple green blobs over black */
+.bg-razer{
   position: fixed;
   inset: 0;
-  z-index: -1;                 /* stays behind all content */
-  pointer-events: none;        /* never block clicks */
+  z-index: -1;
+  pointer-events: none;
   background:
-    radial-gradient(60vmax 60vmax at 10% 20%, #845ef7 0%, transparent 60%),
-    radial-gradient(50vmax 50vmax at 80% 0%,  #22b8cf 0%, transparent 60%),
-    radial-gradient(55vmax 55vmax at 40% 90%, #ffd43b 0%, transparent 60%),
-    var(--page-bg, #0b0f19);   /* fallback base */
-  filter: blur(20px) saturate(120%);
-  animation: bg-drift 16s ease-in-out infinite alternate;
+    radial-gradient(60vmax 60vmax at 15% 25%, rgba(68,214,44,0.85) 0%, transparent 60%),
+    radial-gradient(55vmax 55vmax at 80% 10%, rgba(68,214,44,0.65) 0%, transparent 60%),
+    radial-gradient(70vmax 70vmax at 40% 85%, rgba(68,214,44,0.50) 0%, transparent 60%),
+    radial-gradient(50vmax 50vmax at 10% 90%, rgba(68,214,44,0.40) 0%, transparent 60%),
+    var(--razer-bg);
+  filter: blur(var(--razer-blur)) saturate(var(--razer-sat)) brightness(var(--razer-bright));
+  animation: razerPulse 18s ease-in-out infinite alternate;
   will-change: background-position, filter;
 }
 
-/* Respect users who prefer reduced motion */
+@keyframes razerPulse{
+  0%   { background-position: 15% 25%, 80% 10%, 40% 85%, 10% 90%; }
+  50%  { background-position: 20% 30%, 75% 5%,  45% 80%, 15% 85%; }
+  100% { background-position: 10% 20%, 85% 15%, 35% 90%, 5%  95%; }
+}
+
+/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){
-  .bg-anim{ animation: none; }
+  .bg-razer{ animation: none; }
 }
-
-@keyframes bg-drift{
-  0%   { background-position: 10% 20%, 80% 0%, 40% 90%; }
-  100% { background-position: 20% 30%, 70% 10%, 45% 80%; }
-}
-
-/* Optional: adapt base color for your light/dark theme (Bootstrap 5 data-bs-theme) */
-:root[data-bs-theme="light"] { --page-bg: #ffffff; }
-:root[data-bs-theme="dark"]  { --page-bg: #0b0f19; }
 
 body {
   font-family: "Lato", "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
