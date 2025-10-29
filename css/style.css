@@ -46,6 +46,22 @@
   font-weight: bold;
   text-rendering: optimizeLegibility;
 }
+/* -- */
+.bg-sweep{
+  position: fixed; inset: 0; z-index:-1; pointer-events:none;
+  background:
+    linear-gradient(135deg, rgba(68,214,44,0.06) 0%, rgba(68,214,44,0.0) 40%, rgba(68,214,44,0.06) 60%, rgba(68,214,44,0.0) 100%),
+    #000;
+  background-size: 160% 160%;
+  animation: sweepMove 20s ease-in-out infinite;
+}
+@keyframes sweepMove{
+  0%{ background-position: 0% 0%; }
+  50%{ background-position: 100% 100%; }
+  100%{ background-position: 0% 0%; }
+}
+@media (prefers-reduced-motion: reduce){ .bg-sweep{ animation:none; } }
+
 
 body {
   font-family: "Lato", "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
