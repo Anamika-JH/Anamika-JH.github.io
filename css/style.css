@@ -46,56 +46,7 @@
   font-weight: bold;
   text-rendering: optimizeLegibility;
 }
-/* ===== Blue laser-cross background ===== */
-.bg-lasers{
-  position: fixed; inset: 0; z-index: -1; pointer-events: none;
-  background: var(--laser-bg, radial-gradient(1200px 800px at 50% 70%, #0a1a2e 0%, #050b14 60%, #000 100%));
-}
 
-.bg-lasers svg{ width:100%; height:100%; display:block; }
-
-/* Theme knobs */
-:root{
-  --laser-core:    url(#laser-blue); /* stroke paint */
-  --laser-width:   2.2;              /* beam width (px) */
-  --laser-dash:    14 10;            /* dotted light segments */
-  --laser-alpha:   0.9;              /* beam opacity */
-  --spark-speed:   2.8s;             /* shimmer speed */
-}
-
-:root[data-bs-theme="light"]{
-  /* Slightly brighter background in light mode, but still dark enough for lasers */
-  --laser-bg: radial-gradient(1200px 800px at 50% 70%, #133150 0%, #0b1b2f 60%, #041020 100%);
-}
-
-/* Beam styling */
-.bg-lasers .beam{
-  stroke: var(--laser-core);
-  stroke-width: var(--laser-width);
-  stroke-linecap: round;
-  opacity: var(--laser-alpha);
-  filter: url(#laser-glow);
-
-  /* Give that “LED laser strip” feel */
-  stroke-dasharray: var(--laser-dash);
-  animation: sparkle var(--spark-speed) linear infinite;
-}
-
-/* Slightly different dash offsets for each beam so they don’t sync */
-.bg-lasers .beam.b1{ animation-delay: 0s;    }
-.bg-lasers .beam.b2{ animation-delay: .25s; }
-.bg-lasers .beam.b3{ animation-delay: .5s;  }
-.bg-lasers .beam.b4{ animation-delay: .75s; }
-
-/* Subtle shimmer along the beam (no movement of lines themselves) */
-@keyframes sparkle{
-  to { stroke-dashoffset: -48; }
-}
-
-/* Accessibility: freeze shimmer if user prefers reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .bg-lasers .beam{ animation: none; }
-}
 body {
   font-family: "Lato", "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
   font-size: var(--font-size);
